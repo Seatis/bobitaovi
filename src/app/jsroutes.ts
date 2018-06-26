@@ -1,0 +1,1 @@
+export const APP_JS : string = "assets/js/app.js";

@@ -4,9 +4,11 @@ import { FormsModule } from '@angular/forms';
 import {APP_BASE_HREF} from '@angular/common';
 
 import {MainComponent} from './ovoda/main/main.component';
+import {BobitaComponent} from './ovoda/bobita/bobita.component';
 
 export const routes: Routes = [
-  { path: '', component: MainComponent }
+  { path: '', component: MainComponent },
+  { path: 'bobita-ovi', component: BobitaComponent }
 ];
 
 @NgModule({

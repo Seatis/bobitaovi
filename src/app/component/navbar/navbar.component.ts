@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(router: Router) {
+    router.events.subscribe(s => {
+      if (s instanceof NavigationEnd) {
+        console.log('Ez az url ', router.url)
+      }
+    });
+  }
 
   ngOnInit() {
   }

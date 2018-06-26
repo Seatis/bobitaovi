@@ -8,27 +8,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><img src="assets/img/logo-school.png" alt="Kidz School"></a>
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active"><img src="assets/img/logo-school.png" alt="Kidz School"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown singleDrop color-1   active ">
-          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-home bg-color-1" aria-hidden="true"></i> <span class="active">Home</span>
+          <a routerLink="/" routerLinkActive="active" class="dropdown-toggle">
+            <i class="fa fa-home bg-color-1" aria-hidden="true"></i> <span class="active">Kezdőlap</span>
           </a>
-          <ul class="dropdown-menu dropdown-menu-left">
-            <li class=" active "><a href="index.html">Kidz School</a></li>
-            <li class=""><a href="assets/index-v2.html">Kidz Store</a></li>
-            <li class=""><a href="assets/index-v3.html">Kidz Daycare</a></li>
-            <li class=""><a href="assets/index-v4.html">Kidz Fashion</a></li>
-          </ul>
         </li>
         <li class="dropdown singleDrop color-3 ">
-          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-ul bg-color-3" aria-hidden="true"></i> <span>Pages</span></a>
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-child bg-color-3" aria-hidden="true"></i> <span>Magunkról</span></a>
           <ul class="dropdown-menu dropdown-menu-left">
-            <li class=" "><a href="about_us.html">About</a></li>
+            <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">About</a></li>
             <li class="dropdown dropdown-submenu ">
               <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Team<i class="fa fa-chevron-right" aria-hidden="true"></i>
               </a>

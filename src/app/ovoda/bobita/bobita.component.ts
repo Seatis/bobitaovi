@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { APP_JS } from '../../jsroutes'
+import { ExternaljsService } from '../../service/externaljs.service';
+
 @Component({
   selector: 'app-bobita',
   templateUrl: './bobita.component.html',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BobitaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private jsService: ExternaljsService) { }
 
   ngOnInit() {
+    this.jsService.startLoadingJS([APP_JS]);
+    const element = document.querySelector("#" + 'ourCourses');
+    if (element) { element.scrollIntoView(true); }
   }
 
 }

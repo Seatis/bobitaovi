@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { ColorBarComponent } from './component/color-bar/color-bar.component';
@@ -26,6 +25,8 @@ import { BobitaComponent } from './ovoda/bobita/bobita.component';
 import { AranyComponent } from './ovoda/arany/arany.component';
 import { FejlesztoComponent } from './ovoda/fejleszto/fejleszto.component';
 import { MainComponent } from './ovoda/main/main.component';
+
+import {ExternaljsService} from './service/externaljs.service'
 
 
 @NgModule({
@@ -58,7 +59,7 @@ import { MainComponent } from './ovoda/main/main.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ExternaljsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
