@@ -19,9 +19,41 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/plugins/jquery-ui/jquery-ui.css",
+        "assets/plugins/bootstrap/css/bootstrap.min.css",
+        "assets/plugins/font-awesome/css/font-awesome.min.css",
+        "assets/plugins/rs-plugin/css/settings.css",
+        "assets/plugins/selectbox/select_option1.css",
+        "assets/plugins/owl-carousel/owl.carousel.css",
+        "assets/plugins/fancybox/jquery.fancybox.min.css",
+        "assets/plugins/isotope/isotope.css",
+        "assets/plugins/animate/animate.css",
+        "assets/css/app.css",
+        "assets/css/default.css",
+        "assets/css/color-option1.css",
+        "assets/css/color-option2.css",
+        "assets/css/color-option3.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/plugins/jquery/jquery-min.js",
+        "assets/plugins/jquery-ui/jquery-ui.js",
+        "assets/plugins/bootstrap/js/bootstrap.min.js",
+        "assets/plugins/rs-plugin/js/jquery.themepunch.tools.min.js",
+        "assets/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js",
+        "assets/plugins/selectbox/jquery.selectbox-0.1.3.min.js",
+        "assets/plugins/owl-carousel/owl.carousel.js",
+        "assets/plugins/waypoint/waypoints.min.js",
+        "assets/plugins/counter-up/jquery.counterup.min.js",
+        "assets/plugins/isotope/isotope.min.js",
+        "assets/plugins/fancybox/jquery.fancybox.min.js",
+        "assets/plugins/isotope/isotope-triger.js",
+        "assets/plugins/countdown/jquery.syotimer.js",
+        "assets/plugins/velocity/velocity.min.js",
+        "assets/plugins/smoothscroll/SmoothScroll.js",
+        "assets/plugins/wow/wow.min.js",
+        "assets/js/app.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -55,6 +87,9 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {},
+    "serve": {
+      "port": 8200
+    }
   }
 }
