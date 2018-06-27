@@ -13,6 +13,7 @@ export class ExternaljsService {
       this.loadScript(scripts);
       resolve(true);
     });
+    return this.loadAPI;
   }
   
   public loadScript(dynamicScripts) {        

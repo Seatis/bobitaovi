@@ -2356,14 +2356,17 @@ aside {
 }
 
 .navbar-header .navbar-brand > img {
-  width: 100%;
+  width: 13%;
+  float: left;
 }
 
 @media (min-width: 320px) {
   .navbar-header .navbar-brand {
     height: auto;
     padding: 15px;
-    width: 160px;
+    /*-TODO- saját logó miatt*/
+    /* width: 160px; */
+    width: 340px;
   }
 }
 
@@ -2371,7 +2374,9 @@ aside {
   .navbar-header .navbar-brand {
     height: 110px;
     padding: 30px 15px;
-    width: 196px;
+    /*-TODO- saját logó miatt*/
+    /* width: 196px; */
+    width: 400px;
   }
 }
 
@@ -3364,7 +3369,9 @@ aside {
   #menuBar.bb-fixed-header .navbar-brand {
     height: auto;
     padding: 15px;
-    width: 160px;
+    /*-TODO- saját logó miatt*/
+    /* width: 160px; */
+    width: 340px;
   }
 }
 
@@ -3372,7 +3379,9 @@ aside {
   #menuBar.bb-fixed-header .navbar-brand {
     height: auto;
     padding: 20px 15px;
-    width: 190px;
+    /*-TODO- saját logó miatt*/
+    /* width: 190px; */
+    width: 400px;
   }
 }
 
@@ -6543,7 +6552,9 @@ footer .color-bar {
   .navbar-secondary .navbar-header .navbar-brand {
     height: auto;
     padding: 15px;
-    width: 160px;
+    /* width: 160px; */
+    /*-TODO- saját logó miatt*/
+    width: 340px;
   }
 }
 
@@ -6551,7 +6562,9 @@ footer .color-bar {
   .navbar-secondary .navbar-header .navbar-brand {
     height: 110px;
     padding: 30px 15px;
-    width: 196px;
+    /* width: 196px; */
+    /*-TODO- saját logó miatt*/
+    width: 400px;
   }
 }
 

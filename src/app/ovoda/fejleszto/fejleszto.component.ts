@@ -10,6 +10,7 @@ export class FejlesztoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('GAHJJAJJ')
   }
 
 }

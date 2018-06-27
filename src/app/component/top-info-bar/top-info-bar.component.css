@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+  .functionList > li i {
+    margin-right: 5px;
+  }
+}
+
+@media (min-width: 992px) {
+  .functionList > li i {
+    margin-right: 10px;
+  }
+}

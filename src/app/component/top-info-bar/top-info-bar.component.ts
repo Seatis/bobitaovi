@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopInfoBarComponent implements OnInit {
 
+  actualDate: string;
+  options: object = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+
   constructor() { }
 
   ngOnInit() {
+    this.actualDate = (new Date().toLocaleDateString('hu-HU', this.options)).replace(',', ' ');
   }
-
 }
