@@ -3,6 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { APP_JS } from '../../jsroutes'
 import { ExternaljsService } from '../../service/externaljs.service';
+import { NavbarService } from '../../service/navbar.service';
 
 @Component({
   selector: 'app-main',
@@ -11,20 +12,13 @@ import { ExternaljsService } from '../../service/externaljs.service';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private jsService: ExternaljsService, router: Router) {
-    // router.events.subscribe(s => {
-    //   if (s instanceof NavigationEnd) {
-    //     const tree = router.parseUrl(router.url);
-    //     if (tree.fragment) {
-    //       const element = document.querySelector("#" + tree.fragment);
-    //       if (element) { element.scrollIntoView(true); }
-    //     }
-    //   }
-    // });
+  constructor(private jsService: ExternaljsService, private navbarService: NavbarService) {
   }
 
   ngOnInit() {
-    this.jsService.startLoadingJS([APP_JS]);
+    this.jsService.startLoadingJS([APP_JS]).then(() => {
+      this.navbarService.setDefault();
+    });
   }
 
 }

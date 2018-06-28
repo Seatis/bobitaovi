@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
+import { NavbarService } from '../../service/navbar.service';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,31 +10,18 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(router: Router) {
-    // router.events.subscribe(s => {
-    //   console.log(s)
-    //   if (s instanceof NavigationEnd) {
-    //     const tree = router.parseUrl(router.url);
-    //     console.log('Ez az url ', router.url)
-    //     console.log('Ez a fragment ', tree.fragment);
-    //     // const element = document.querySelector('#ourTeam');
-    //     // console.log(element)
-    //     // element.scrollIntoView(true);
-        
-    //     // setTimeout(function(){ const element = document.querySelector('#ourTeam');
-    //     // console.log(element); element.scrollIntoView(true); }, 3000);
+  selectedOvi: string;
 
-    //   }
-    // });
+  constructor(private navbarService: NavbarService) {
+
   }
 
   ngOnInit() {
-    
+    this.navbarService.selectedOvoda.subscribe(selected => {
+      console.log(selected);
+      this.selectedOvi = selected;
+    });
   }
 
-  moveMe() {
-    const element = document.querySelector('#ourTeam');
-    console.log(element)
-  }
 
 }

@@ -1,5 +1,6 @@
 <nav id="menuBar" class="navbar navbar-default lightHeader" role="navigation">
-  <div class="container">
+  <!-- KEZDO OLDAL -->
+  <div class="container" *ngIf="selectedOvi==='default'">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -26,177 +27,162 @@
         <li class="dropdown singleDrop color-3">
           <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-child bg-color-3" aria-hidden="true"></i> <span>Magunkról</span></a>
           <ul class="dropdown-menu dropdown-menu-left">
-            <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">About</a></li>
-            <li class="dropdown dropdown-submenu ">
-              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Team<i class="fa fa-chevron-right" aria-hidden="true"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li class=" "><a href="teachers.html">Teachers</a></li>
-                <li class=" "><a href="teachers-details.html">Teacher Details</a></li>
-              </ul>
-            </li>
-            <li class=" "><a href="testimonial.html">Testimonial</a></li>
-            <li class="dropdown dropdown-submenu
-                ||
-                ||
-                ">
-              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Events <i class="fa fa-chevron-right" aria-hidden="true"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li class=" "><a href="all-events.html">All Events</a></li>
-                <li class=""><a href="single-event-left-sidebar.html">Single Event Left Sidebar</a></li>
-                <li class=""><a href="single-event-right-sidebar.html">Single Event Right Sidebar</a></li>
-              </ul>
-            </li>
-            <li class=""><a href="photo-gallery.html">Photo Gallery</a></li>
-            <li class=""><a href="pricing-table.html">Pricing Table</a></li>
-            <li class=""><a href="services.html">Services</a></li>
-            <li class=""><a href="service-details.html">Services Details</a></li>
-            <li class=""><a href="search-result.html">Search Results</a></li>
-            <li class=""><a href="contact-us.html">Contact Us</a></li>
-            <li class=""><a href="faq.html">FAQ</a></li>
-            <li class=""><a href="sign-up-or-login.html">Sign Up / Login</a></li>
-            <li class="" ><a href="404.html">Error 404</a></li>
-            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Küldetésünk</a></li>
+            <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Fényképalbum</a></li>
+            <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Alapítvány</a></li>
+            <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Események</a></li>
+            <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Térkép</a></li>
+            <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Kapcsolat</a></li>
           </ul>
         </li>
-        <li class=" dropdown megaDropMenu color-2 ">
-          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">
-            <i class="fa fa-file-text-o bg-color-2" aria-hidden="true"></i>
-            <span>Courses</span>
-          </a>
-          <ul class="row dropdown-menu">
-            <li class="col-sm-3 col-xs-12">
-              <ul class="list-unstyled">
-                <li>Courses Grid</li>
-                <li class=""><a href="course-grid-full.html">Courses Grid Fullwidth</a></li>
-                <li class="">
-                  <a href="course-grid-left-sidebar.html">Courses Grid Left Sidebar</a></li>
-                <li class="">
-                  <a href="course-grid-right-sidebar.html">Courses Grid Right Sidebar</a></li>
-              </ul>
-            </li>
-            <li class="col-sm-3 col-xs-12">
-              <ul class="list-unstyled">
-                <li>Courses List</li>
-                <li class=""><a href="course-list-fullwidth.html">Courses List Fullwidth</a></li>
-                <li class=""><a href="course-list-left-sidebar.html">Courses List left Sidebar</a></li>
-                <li class=""><a href="course-list-right-sidebar.html">Courses List Right Sidebar</a></li>
-              </ul>
-            </li>
-            <li class="col-sm-3 col-xs-12">
-              <ul class="list-unstyled">
-                <li>Single Course</li>
-                <li class=""><a href="course-single.html">Single Course Fullwidth</a></li>
-                <li class=""><a href="course-single-left-sidebar.html">Single Course left Sidebar</a></li>
-                <li class=""><a href="course-single-right-sidebar.html">Single Course Right Sidebar</a></li>
-              </ul>
-            </li>
-            <li class="col-sm-3 col-xs-12">
-              <ul class="list-unstyled">
-                <li>Checkout</li>
-                <li class="" ><a href="checkout-step-1.html">Personal Info</a></li>
-                <li class="" ><a href="checkout-step-2.html">Payment Info</a></li>
-                <li class="" ><a href="checkout-step-3.html">Confirmation</a></li>
-              </ul>
-            </li>
-          </ul>
+        <li class="dropdown singleDrop color-2">
+          <a [routerLink]="['/bobita-ovi']" routerLinkActive="active" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="bg-color-2" aria-hidden="true">B</i> <span>Bóbita ovi</span></a>
         </li>
-        <li class="dropdown singleDrop color-4 ">
-          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-pencil-square-o bg-color-4" aria-hidden="true"></i>
-            <span>Store</span>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-right">
-            <li class="dropdown dropdown-submenu
-                ||
-                ||
-                ">
-              <a href="javascript:void(0)" class="dropdown-toggle " data-toggle="dropdown">Products<i class="fa fa-chevron-right" aria-hidden="true"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li class=""><a href="product.html">Products Fullwidth</a></li>
-                <li class=""><a href="product-left-sidebar.html">Products Left Sidebar</a></li>
-                <li class=""><a href="product-right-sidebar.html">Products Right Sidebar</a></li>
-              </ul>
-            </li>
-            <li class=""><a href="single-product.html">Single Product</a></li>
-            <li class=""><a href="category.html">Product Categories</a></li>
-            <li class=""><a href="cart-page.html">Cart</a></li>
-            <li class="dropdown dropdown-submenu">
-              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Checkout<i class="fa fa-chevron-right" aria-hidden="true"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li class=" "><a href="checkout-step-1.html">Personal Info</a></li>
-                <li class=" "><a href="checkout-step-2.html">Payment Info</a></li>
-                <li class=" "><a href="checkout-step-3.html">Confirmation</a></li>
-              </ul>
-            </li>
-          </ul>
+        <li class="dropdown singleDrop color-4">
+          <a [routerLink]="['/arany-ovi']" routerLinkActive="active" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="bg-color-4" aria-hidden="true">A</i> <span>Arany ovi</span></a>
         </li>
-        <li class="dropdown singleDrop color-5  ">
-          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-calendar bg-color-5" aria-hidden="true"></i>
-            <span>Blog</span>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-right">
-            <li class="dropdown dropdown-submenu
-                ||
-              
-              
-            ">
-              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Blog Grid<i class="fa fa-chevron-right" aria-hidden="true"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li class=""><a href="blog-grid.html">Blog Grid Fullwidth</a></li>
-                <li class=""><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
-                <li class=""><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
-              </ul>
-            </li>
-            <li class="dropdown dropdown-submenu
-                ||
-                ||
-                ">
-              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Blog List<i class="fa fa-chevron-right" aria-hidden="true"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li class="" ><a href="blog-list.html">Blog List Fullwidth</a></li>
-                <li class=""><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
-                <li class=""><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
-              </ul>
-            </li>
-            <li class="dropdown dropdown-submenu
-                ||
-                ||
-                ">
-              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Single Blog<i class="fa fa-chevron-right" aria-hidden="true"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li class=""><a href="single-blog.html">Single Blog Fullwidth</a></li>
-                <li class=""><a href="single-blog-left-sidebar.html">Single Blog Left Sidebar</a></li>
-                <li class=""><a href="single-blog-right-sidebar.html">Single Blog Right Sidebar</a></li>
-              </ul>
-            </li>
-          </ul>
+        <li class="dropdown singleDrop color-5">
+          <a [routerLink]="['/fejleszto-ovi']" routerLinkActive="active" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="bg-color-5" aria-hidden="true">F</i> <span>Fejlesztő ovi</span></a>
         </li>
         <li class="dropdown singleDrop color-6 ">
-          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gg bg-color-6" aria-hidden="true"></i> <span>Components</span></a>
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-text-o bg-color-6" aria-hidden="true"></i> <span>Dokumentumok</span></a>
           <ul class="dropdown-menu dropdown-menu-right">
-            <li class=" "><a href="accordion-toggles.html">Accordions &amp; Toggles</a></li>
-            <li class=""><a href="tabs-dropdown.html">Tabs &amp; Dropdowns</a></li>
-            <li class=" "><a href="alert-label-badges.html">Alert-Label-badges</a></li>
-            <li class=" "><a href="progress-bar.html">Progress Bar</a></li>
-            <li class=" "><a href="buttons.html">Buttons</a></li>
-            <li class=" "><a href="forms.html">Forms</a></li>
-            <li class=" "><a href="list-panel.html">Listgroups Panel</a></li>
-            <li class=" "><a href="tooltip-pagination.html">Tooltip Pagination</a></li>
-            <li class=" "><a href="typography.html">Typography</a></li>
-            <li class=" "><a href="responsive-embed.html">Responsive Embed</a></li>
+            <li class=" "><a href="#">Házirend</a></li>
+            <li class=""><a href="#">Pedagógiai program</a></li>
+            <li class=" "><a href="#">Szervezeti és működési <br> szabályzat</a></li>
+            <!-- -TODO- ne legyen sortörés, megoldani! -->
+            <li class=" "><a href="#">Különös közzétételi lista</a></li>
           </ul>
         </li>
       </ul>
     </div>
+  </div>
 
-    
+  <!-- BOBITA -->
+
+  <div class="container" *ngIf="selectedOvi==='bobita'">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active"><img src="assets/img/logo-hand.png" alt="Kidz School">
+        <div class="logo-text-area">
+          <span class="logo-text">Bóbita Óvoda</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="dropdown singleDrop color-1">
+          <a routerLink="/" routerLinkActive="active" class="dropdown-toggle">
+            <i class="fa fa-home bg-color-1" aria-hidden="true"></i> <span class="active">Kezdőlap</span>
+          </a>
+        </li>
+        <li class="dropdown singleDrop color-3">
+          <a routerLink="/" routerLinkActive="active" class="dropdown-toggle">
+            <i class="fa fa-home bg-color-3" aria-hidden="true"></i> <span class="active">Másik óvoda</span>
+          </a>
+        </li>
+        <li class="dropdown singleDrop color-2">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gg bg-color-2" aria-hidden="true"></i> <span>Óvodánkról</span></a>
+          <ul class="dropdown-menu dropdown-menu-left">
+            <li class=" "><a href="#">Bevezető</a></li>
+            <li class=""><a href="#">Munkatársaink</a></li>
+            <li class=" "><a href="#">Óvodai csoportjaink</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown singleDrop color-4">
+          <a routerLink="/" routerLinkActive="active" class="dropdown-toggle">
+            <i class="fa fa-home bg-color-4" aria-hidden="true"></i> <span class="active">Galéria</span>
+          </a>
+        </li>
+        <li class="dropdown singleDrop color-5">
+          <a routerLink="/" routerLinkActive="active" class="dropdown-toggle">
+            <i class="fa fa-home bg-color-5" aria-hidden="true"></i> <span class="active">Események</span>
+          </a>
+        </li>
+        <li class="dropdown singleDrop color-6">
+          <a routerLink="/" routerLinkActive="active" class="dropdown-toggle">
+            <i class="fa fa-home bg-color-6" aria-hidden="true"></i> <span class="active">Kapcsolat</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="selectedOvi==='arany'">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active"><img src="assets/img/logo-hand.png" alt="Kidz School">
+        <div class="logo-text-area">
+          <span class="logo-text">Arany Óvoda</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown singleDrop color-1   active ">
+          <a routerLink="/" routerLinkActive="active" class="dropdown-toggle">
+            <i class="fa fa-home bg-color-1" aria-hidden="true"></i> <span class="active">Kezdőlap</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="selectedOvi==='fejleszto'">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active"><img src="assets/img/logo-hand.png" alt="Kidz School">
+        <div class="logo-text-area">
+          <span class="logo-text">Fejlesztő Óvoda</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown singleDrop color-1   active ">
+          <a routerLink="/" routerLinkActive="active" class="dropdown-toggle">
+            <i class="fa fa-home bg-color-1" aria-hidden="true"></i> <span class="active">Kezdőlap</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
+
+
+
+<!-- <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="bg-color-5" aria-hidden="true">F</i> <span>Fejlesztő ovi</span></a>
+<ul class="dropdown-menu dropdown-menu-left">
+  <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Kezdőlap</a></li>
+  <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">A Bóbita Óvodáról</a></li>
+  <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Munkatársaink</a></li>
+  <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Alapítvány</a></li>
+  <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Óvodai csoportjaink</a></li>
+  <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Események</a></li>
+  <li class=" "><a [routerLink]="['/bobita-ovi']" fragment="ourTeam" routerLinkActive="active">Fényképalbum</a></li>
+</ul> -->

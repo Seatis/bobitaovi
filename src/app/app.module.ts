@@ -26,7 +26,8 @@ import { AranyComponent } from './ovoda/arany/arany.component';
 import { FejlesztoComponent } from './ovoda/fejleszto/fejleszto.component';
 import { MainComponent } from './ovoda/main/main.component';
 
-import {ExternaljsService} from './service/externaljs.service'
+import {ExternaljsService} from './service/externaljs.service';
+import {NavbarService} from './service/navbar.service';
 
 
 @NgModule({
@@ -59,7 +60,10 @@ import {ExternaljsService} from './service/externaljs.service'
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [ExternaljsService],
+  providers: [
+    ExternaljsService,
+    NavbarService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

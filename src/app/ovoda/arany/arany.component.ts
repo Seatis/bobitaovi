@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { APP_JS } from '../../jsroutes'
+import { ExternaljsService } from '../../service/externaljs.service';
+import { NavbarService } from '../../service/navbar.service';
+
 @Component({
   selector: 'app-arany',
   templateUrl: './arany.component.html',
@@ -7,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AranyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private jsService: ExternaljsService, private navbarService: NavbarService) { }
 
   ngOnInit() {
+    this.jsService.startLoadingJS([APP_JS]).then(() => {
+      this.navbarService.setArany();
+    });
   }
 
 }

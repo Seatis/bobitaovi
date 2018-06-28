@@ -5,10 +5,14 @@ import {APP_BASE_HREF} from '@angular/common';
 
 import {MainComponent} from './ovoda/main/main.component';
 import {BobitaComponent} from './ovoda/bobita/bobita.component';
+import {AranyComponent} from './ovoda/arany/arany.component';
+import {FejlesztoComponent} from './ovoda/fejleszto/fejleszto.component';
 
 export const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'bobita-ovi', component: BobitaComponent }
+  { path: 'bobita-ovi', component: BobitaComponent },
+  { path: 'arany-ovi', component: AranyComponent },
+  { path: 'fejleszto-ovi', component: FejlesztoComponent },
 ];
 
 @NgModule({

@@ -2740,7 +2740,7 @@ aside {
 
 @media (min-width: 1200px) {
   .navbar-nav > li.dropdown.singleDrop .dropdown-menu {
-    min-width: 230px;
+    min-width: 230;
   }
 }
 
